@@ -7,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
 
 
 </head>
 
 <body>
-    <div class="coltainer">
+    
+    
+    <div class="container">
         <h4>Customer information</h4>
 
 
@@ -53,15 +55,15 @@
             </div>
             <div>
                 <br>
-                <button type="button" id="createbutton" onclick="showdata()" class="btn btn-outline-primary">Create
+                <button type="button" id="createbutton" onclick="creatC()" class="btn btn-outline-primary">Create
                     customer</button>
             </div>
         </form>
         <br>
 
-    </div>
-    </div>
-    <div>
+  
+   
+   
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -78,12 +80,12 @@
 
             </tbody>
         </table>
-    </div>
-    </div>
+</div>
     <script>
         var dataList = [];
+        var currIndex = -1;
 
-        function showdata() {
+        function creatC() {
             var fullName = document.getElementById('fullName').value
             var email = document.getElementById('email').value
             var phone = document.getElementById('phone').value
@@ -92,18 +94,23 @@
                 "fullName": fullName,
                 "email": email, "phone": phone, "address": address
             };
+
             if(currIndex ==-1) {
-                creat(customer)
-             } else { 
+                dataList.push(customer);
+                clear()
+                show(customer)
+             } else {
                  dataList[currIndex]= customer;
-                //  currIndex = -1;
-                 document.getElementById('createbutton').innerHTML = "dk"
+                 currIndex = -1;
+
                  displayAll()
              }
 
 
-            
+
         }
+
+
 
         function displayAll() {
                 var dataListTag = document.getElementById('card');
@@ -112,7 +119,7 @@
                  var customer = dataList[i];
                 
                  dataListTag.innerHTML += `<tr>
-            <td>${i}</td>
+            <td>${++i}</td>
                   <td>${customer.fullName} </td>
                   <td>${customer.email}</td>
                   <td>${customer.phone}</td>
@@ -123,23 +130,28 @@
              }
 
              }
-        function creat(customer){
-            dataList.push(customer);
-            console.log(dataList.length)
+        function show(customer){
+
+
             var dataListTag = document.getElementById('card');
 
-            dataListTag.innerHTML += `<tr>
+
+                dataListTag.innerHTML += `<tr>
             <td>${dataList.length}</td>
                   <td>${customer.fullName} </td>
                   <td>${customer.email}</td>
                   <td>${customer.phone}</td>
                   <td>${customer.address}</td>
-                  <td><button type="button" class="btn btn-outline-success" onclick ='edit(dataList.length-1)' >Edit</button></td>
-                  <td><button type="button" class="btn btn-outline-danger" onclick ='delete(dataList.length-1)'>Delete</button></td>
+                  <td><button type="button" class="btn btn-outline-success" onclick ='edit(${dataList.length-1})' >Edit</button></td>
+                  <td><button type="button" class="btn btn-outline-danger" onclick ='deleteItem(${dataList.length-1})'>Delete</button></td>
                   <tr>`
 
+
+
+
+
         }
-        var currIndex = -1;
+
         function edit(index){
             currIndex = index;
             var customer = dataList[index];
@@ -149,10 +161,26 @@
             document.getElementById('phone').value = customer.phone
             document.getElementById('address').value = customer.address
             document.getElementById('createbutton').innerHTML = "Cap Nhat"
-
-           
-
         }
+        function clear() {
+            document.getElementById('fullName').value ="";
+            document.getElementById('email').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('address').value ="";
+        }
+      function deleteItem(x) {
+            for(i =0; i<dataList.length;i++){
+                if(i == x){
+                    dataList.splice(i,1)
+                    show(customer)
+
+                }
+            }
+
+      }
+
+
+
     </script>
 
 </body>

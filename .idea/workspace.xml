@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="043c4c5f-85e5-4b21-83b9-4f8b8b386b49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/currency-converter-jsp/src/main/webapp/converter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/bt1.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/bt1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_dictionary/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple_dictionary/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration name="bt1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module3/bootstrap/bt1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.bt1.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -35,10 +48,24 @@
       <option name="presentableId" value="Default" />
       <updated>1638443533432</updated>
       <workItem from="1638443535538" duration="46000" />
+      <workItem from="1638499911135" duration="241000" />
+      <workItem from="1638500241275" duration="8015000" />
+      <workItem from="1638513668920" duration="6737000" />
+      <workItem from="1638758449357" duration="94000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638500332963">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1638500332963" />
+    <state x="209" y="22" key="new project wizard" timestamp="1638758528700">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="22" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1638758528700" />
   </component>
 </project>
